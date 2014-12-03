@@ -1,9 +1,9 @@
 <div class="beer-holder">
 	<div class="choosen-beer">
-		<img src="<%= @beer_label %>">
-			<%= @name %> is <%= @abv %>% alcohol
+		<img src="<%= @label %>">
+			<%= @name.upcase %> is <%= @abv %>% Alcohol By Volume
 		</div>
-	<h2>Here's some shit about:</h2>
+	<h2>Here's the shit they talk:</h2>
 	<h3><%= @description %></h3>
 
 	<form method="get" action="/">
