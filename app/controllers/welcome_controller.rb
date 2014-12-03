@@ -11,6 +11,7 @@ class WelcomeController < ApplicationController
     beer = response['response']['beers']['items'].first['beer']
     @beer_abv = beer['beer_abv']
     @beer_name = beer['beer_name']
+    @beer_label = beer['beer_label']
   end
 
 end
