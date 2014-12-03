@@ -40,3 +40,6 @@ gem 'spring',        group: :development
 
 # Use httparty for parsing API
 gem 'httparty'
+
+# Use pry for irb substitute
+gem 'pry'
