@@ -1,16 +1,15 @@
 class BACController < ApplicationController
 
   
-  def drinker
+  def round
 
-    round = { sex: sex, fl_oz: fl_oz, lbs: lbs, hours: hours }
+    round = { fl_oz: fl_oz, lbs: lbs, hours: hours }
     
     round[:fl_oz] = fl_oz
     round[:lbs]   = lbs
     round[:hours] = hours 
     
     
-
   end
 
 t.decimal :multiplier, precision: 8, scale: 2
