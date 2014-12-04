@@ -20,6 +20,8 @@ class ApiController < ApplicationController
     @top_beers  = trending['response']["micro"]["items"].map { |beer| beer['beer'] }
 
 
+    { query => "wolverine"}
+
 
 
   end
@@ -39,7 +41,7 @@ class ApiController < ApplicationController
     @description = beer['beer_description']
     @brewery     = beer['brewery_name']
 
-    
+
 
 
 

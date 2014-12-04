@@ -2,20 +2,18 @@
 # for example lib/tasks/capistrano.rake, and they will automatically be available to Rake.
 
 require File.expand_path('../config/application', __FILE__)
-require File.expand_path('../config/environments/production', __FILE__)
 
 Rails.application.load_tasks
-
 
 namespace :db do
 
   desc "load untappd API into database"
   task :load_beer do
 
-    require 'untappd'
-    require 'untappd/beer'
+    x = rand(10) * 100 + rand(3)
+    y = x + 3
   
-    (1..3).map do |id|
+    (x..y).each do |id|
       info = Untappd::Beer.info(id, options={})
       if info && info.beer
         hash           = {}

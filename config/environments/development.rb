@@ -34,4 +34,9 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+    Untappd.configure do |config|
+    config.client_id = '16E1853C36CF3E162699B468424A48C4279030EA'
+    config.client_secret = 'B4BC7FB7D8CD6BDA886E92939B388004A3ACC89D'
+    config.gmt_offset = -5
+  end
 end
