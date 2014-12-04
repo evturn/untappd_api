@@ -46,3 +46,6 @@ gem 'pry'
 
 # Use backbone
 gem 'backbone-on-rails'
+
+# Use untappd gem for api
+gem 'untappd'

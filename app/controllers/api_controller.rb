@@ -18,10 +18,9 @@ class ApiController < ApplicationController
     @f_location = "#{city}, #{state} #{country}"
 
     @top_beers  = trending['response']["micro"]["items"].map { |beer| beer['beer'] }
-    
-    
 
-   
+
+
 
   end
 
@@ -37,6 +36,7 @@ class ApiController < ApplicationController
     @name        = beer['beer_name']
     @label       = beer['beer_label']
     @description = beer['beer_description']
+    @brewery     = beer['brewery_name']
 
 
 
