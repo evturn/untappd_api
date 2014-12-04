@@ -10,10 +10,12 @@ class WelcomeController < ApplicationController
 
     @f_beer     = featured['beer']['beer_name']
     @f_label    = featured['beer']['beer_label']
+    @f_abv      = featured['beer']['beer_abv']
     @f_brewery  = featured['brewery']['brewery_name']
     city        = featured['brewery']['location']['brewery_city']
     state       = featured['brewery']['location']['brewery_state']
-    @f_location = "#{city}, #{state}"
+    country     = featured['brewery']['country_name']
+    @f_location = "#{city}, #{state} #{country}"
 
     @top_beers  = trending['response']["micro"]["items"].map { |beer| beer['beer'] }
     
@@ -40,4 +42,4 @@ class WelcomeController < ApplicationController
 
   end
 
-end/v4/beer/trending
+end

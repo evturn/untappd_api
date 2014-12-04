@@ -6,8 +6,10 @@
 </div>
 
 <div class="featured">
+	<h2>TRENDING on</h2><%= image_tag "bottles.png", size: "100x100" %>
 	<img src="<%= @f_label %>">
-	<h2><%= @f_beer %></h2>
-	<h2><%= @f_brewery %></h2>
-	<h2><%= @f_location %></h2>
+	<h3>BEER: <%= @f_beer %></h3>
+	<h3>ABV: <%= @f_abv%></h3>
+	<h3>BREWERY: <%= @f_brewery %></h3>
+	<h3>FROM: <%= @f_location %></h3>
 </div>
