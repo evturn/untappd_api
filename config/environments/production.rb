@@ -78,9 +78,9 @@ Rails.application.configure do
 
   # Untappd
   Untappd.configure do |config|
-  config.client_id = '16E1853C36CF3E162699B468424A48C4279030EA'
-  config.client_secret = 'B4BC7FB7D8CD6BDA886E92939B388004A3ACC89D'
-  config.gmt_offset = -5
-end
+    config.client_id = '16E1853C36CF3E162699B468424A48C4279030EA'
+    config.client_secret = 'B4BC7FB7D8CD6BDA886E92939B388004A3ACC89D'
+    config.gmt_offset = -5
+  end
 
 end
