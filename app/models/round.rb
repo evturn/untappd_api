@@ -1,11 +1,10 @@
 class Round < ActiveRecord::Base
-
+belongs_to :drinker
       
   def initialize(drinker)
 
-    round[:fl_oz] = fl_oz
-    round[:lbs]   = lbs
-    round[:hours] = hours
+    @fl_oz = fl_oz
+    @hours = hours
 
   end
 
