@@ -6,7 +6,6 @@ class Drinker < ActiveRecord::Base
     @sex = sex
     @lbs = lbs
 
-
   end 
 
 

@@ -14,10 +14,4 @@ class BACController < ApplicationController
 
 
 
-
-
-  
-
-
-
 end
