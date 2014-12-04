@@ -43,3 +43,6 @@ gem 'httparty'
 
 # Use pry for irb substitute
 gem 'pry'
+
+# Use backbone
+gem 'backbone-on-rails'
