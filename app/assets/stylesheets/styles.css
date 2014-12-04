@@ -43,16 +43,20 @@ body {
 }
 
 .featured {
-
+	padding-bottom: 20px;
 }
 
 .trending {
-
+	line-height: 0.5;
 }
 
 ul {
 	list-style-type: none;
 	font-size: 14px;
+}
+
+li {
+	margin-left: -45px;
 }
 
 
@@ -75,5 +79,6 @@ h3 {
 
 h4 {
 	font-size: 14px;
+	line-height: 0.5;
 }
 
