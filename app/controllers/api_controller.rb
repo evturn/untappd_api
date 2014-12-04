@@ -1,7 +1,7 @@
 class ApiController < ApplicationController
 
   def index
- 
+    # ********** HTTParty ************
     trend_url = "http://api.untappd.com/v4/beer/trending?client_id=16E1853C36CF3E162699B468424A48C4279030EA&client_secret=B4BC7FB7D8CD6BDA886E92939B388004A3ACC89D"
     
     trending    = HTTParty.get( trend_url )
@@ -26,6 +26,7 @@ class ApiController < ApplicationController
 
   def show
 
+    # ********** HTTParty ************
     query = params['query'].gsub(' ', '+')
     url = "http://api.untappd.com/v4/search/beer?client_id=16E1853C36CF3E162699B468424A48C4279030EA&client_secret=B4BC7FB7D8CD6BDA886E92939B388004A3ACC89D&q=#{query}"
 
@@ -37,6 +38,8 @@ class ApiController < ApplicationController
     @label       = beer['beer_label']
     @description = beer['beer_description']
     @brewery     = beer['brewery_name']
+
+    
 
 
 

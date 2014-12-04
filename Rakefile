@@ -17,25 +17,20 @@ desc "load untappd data"
     require 'untappd'
     require "untappd/beer"
 
-
-
-    (1..100).map do |id|
-      hash = {}
+    (1..1000).map do |id|
       info = Untappd::Beer.info(id, options={})
-      hash[:name]    = info.beer.beer_name || options
-      hash[:abv]     = info.beer.beer_abv
-      hash[:style]   = info.beer.beer_style
-      hash[:label]   = info.beer.beer_label
-      hash[:brewery] = info.beer.brewery.brewery_name
-      File.open("data.json","a+") do |f|
-        f.write(hash.to_json)
+      if info && info.beer
+        hash = {}
+        hash[:name]    = info.beer.beer_name
+        hash[:abv]     = info.beer.beer_abv
+        hash[:style]   = info.beer.beer_style
+        hash[:label]   = info.beer.beer_label
+        hash[:brewery] = info.beer.brewery.brewery_name
+        File.open("data.json","a+") do |f|
+          f.write(hash.to_json)
+        end
       end
     end
-
-  
-
-      # CSV.open("data.csv", "wb") {|csv| hash.to_a.each {|elem| csv << elem} }
-      # Beer.create(hash)
   end
 
 end
