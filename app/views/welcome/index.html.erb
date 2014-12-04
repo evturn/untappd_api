@@ -5,11 +5,26 @@
 	</form>
 </div>
 
-<div class="featured">
-	<h2>TRENDING on</h2><%= image_tag "bottles.png", size: "100x100" %>
-	<img src="<%= @f_label %>">
-	<h3>BEER: <%= @f_beer %></h3>
-	<h3>ABV: <%= @f_abv%></h3>
-	<h3>BREWERY: <%= @f_brewery %></h3>
-	<h3>FROM: <%= @f_location %></h3>
+<div class="right-bar">
+	<div class="featured">
+		<h2>FEATURED</h2>
+		<img src="<%= @f_label %>">
+		<h4>BEER: <%= @f_beer %></h4>
+		<h4>ABV: <%= @f_abv%></h4>
+		<h4>BREWERY: <%= @f_brewery %></h4>
+		<h4>FROM: <%= @f_location %></h4>
+	</div>
+	<div class="trending">
+		<h2>TRENDING</h2>
+		<%= image_tag "bottles.png", size: "100x100", class: "featured-label" %>
+	<ul>
+		<% @top_beers.map do|beer|%>
+		<li>
+			<h4>
+			<%= beer["beer_name"] %>
+			</h4>
+		</li>
+		<% end %>
+	</ul>
+	</div>	
 </div>

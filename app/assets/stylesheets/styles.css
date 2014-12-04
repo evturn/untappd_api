@@ -35,13 +35,26 @@ body {
   margin-left: -300px;
 }
 
-.featured {
+.right-bar {
 	border: 1px solid black;
   top: 60%;
 	float: right;
 	width: 220px;
+}
+
+.featured {
 
 }
+
+.trending {
+
+}
+
+ul {
+	list-style-type: none;
+	font-size: 14px;
+}
+
 
 form {
   width:50%; 
@@ -59,3 +72,8 @@ h2 {
 h3 {
 	font-size: 20px;
 }
+
+h4 {
+	font-size: 14px;
+}
+
