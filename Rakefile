@@ -5,11 +5,4 @@ require File.expand_path('../config/application', __FILE__)
 
 Rails.application.load_tasks
 
-namespace :db do
-  desc "Parse Untappd API"
-  task :api_to_file do
 
-
-  end
-
-end
