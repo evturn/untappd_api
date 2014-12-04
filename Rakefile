@@ -9,26 +9,22 @@ Rails.application.load_tasks
 
 namespace :db do
 
-desc "load untappd data"
-  task :load_beers do
+  desc "load untappd API into database"
+  task :load_beer do
 
-    require 'csv'
-    require 'json'
     require 'untappd'
-    require "untappd/beer"
-
-    (1..1000).map do |id|
+    require 'untappd/beer'
+  
+    (1..3).map do |id|
       info = Untappd::Beer.info(id, options={})
       if info && info.beer
-        hash = {}
+        hash           = {}
         hash[:name]    = info.beer.beer_name
         hash[:abv]     = info.beer.beer_abv
         hash[:style]   = info.beer.beer_style
         hash[:label]   = info.beer.beer_label
         hash[:brewery] = info.beer.brewery.brewery_name
-        File.open("data.json","a+") do |f|
-          f.write(hash.to_json)
-        end
+        Beer.create(hash)
       end
     end
   end
