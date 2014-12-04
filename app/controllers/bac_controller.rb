@@ -12,7 +12,6 @@ class BACController < ApplicationController
     
   end
 
-t.decimal :multiplier, precision: 8, scale: 2
 
 
   def calculate
