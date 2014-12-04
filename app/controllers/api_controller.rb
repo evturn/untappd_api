@@ -1,4 +1,4 @@
-class BeersAPIController < ApplicationController
+class ApiController < ApplicationController
 
   def index
  
