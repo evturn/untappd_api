@@ -7,13 +7,11 @@ Rails.application.load_tasks
 
 namespace :db do
 
-  desc "load untappd API into database"
+  desc "send beers to database"
   task :load_beer do
 
-    x = rand(10) * 100 + rand(3)
-    y = x + 3
   
-    (x..y).each do |id|
+    (1..1000).each do |id|
       info = Untappd::Beer.info(id, options={})
       if info && info.beer
         hash           = {}
