@@ -1,17 +1,22 @@
 class BACController < ApplicationController
 
   
-  def round
+  def index
 
-    round = { fl_oz: fl_oz, lbs: lbs, hours: hours }
-    
-    round[:fl_oz] = fl_oz
-    round[:lbs]   = lbs
-    round[:hours] = hours 
     
     
+
   end
 
+  def new
+
+    @drinker = Drinker.create(params)
+    @round = Round.new(params)
+    @round.calculate
+    @round.update
+    @round.save
+
+  end
 
 
 end
