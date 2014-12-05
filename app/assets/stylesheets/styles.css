@@ -50,6 +50,18 @@ body {
 	line-height: 0.5;
 }
 
+.calculator {
+	font-size: 18px;
+	float: right;
+	width: 400px;
+}
+
+td {
+	border: 1px solid white;
+	width: 400px;
+}
+
+
 ul {
 	list-style-type: none;
 	font-size: 14px;
