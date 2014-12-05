@@ -2,8 +2,7 @@ window.UntappdApi =
   Models: {}
   Collections: {}
   Views: {}
-  Routers: {}
-  initialize: -> alert 'Hello from Backbone!'
+  initialize: -> console.log('You sick bastard')
 
 $(document).ready ->
   UntappdApi.initialize()

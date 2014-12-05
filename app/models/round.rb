@@ -8,13 +8,10 @@ belongs_to :drinker
     @hours = hours['params']
     Round.update({ fl_oz: @fl_oz, hours: @hours })
 
-
-
   end
 
   def calculate(abv, lbs, sex, hours)
 
-    
     r = sex == "male" ? 0.73 : 0.66
     bac = ((abv * 5.14) / (lbs * r)) - (0.015 * hours)
 
@@ -30,7 +27,7 @@ end
     step_6 = (step_4 - step_5) # Subtract by Hours and Elimination Constant
     step_7 = (step_6 / 100)
 
-    
+
     step_1 = (fl_oz * 5.14)
     step_2 = (lbs * sex)
     step_3 = (step_1 / step_2)
